@@ -1,0 +1,27 @@
+.hero {
+    background-image: url('images/trialbg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.first-section {
+ background-color: #002B38;
+ padding: 40px;   
+}
+
+.ceo-image {
+    border-radius: 200px;
+    width: 90px;
+    height: 90px;
+}
+
+.readmore, a:link, a:hover, a:visited {
+    color: white;
+    text-decoration: underline;
+}
