@@ -588,3 +588,101 @@ section.dark {
 .Highlight_description__p6mvS {
     color: var(--navy80)
 }
+
+.before-highlight {
+    padding-bottom: calc(var(--section-padding)*2);
+    margin-top: -1px
+}
+
+.TeamSpotlight_container__46l5q {
+    display: grid;
+    align-items: center
+}
+
+.TeamSpotlight_container__46l5q>* {
+    grid-column: 1;
+    grid-row: 1
+}
+
+.TeamSpotlight_background__wwEq_:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--black);
+    opacity: .3;
+    z-index: 1
+}
+
+@media(max-width: 48em) {
+    .TeamSpotlight_background__wwEq_ {
+        grid-row:2
+    }
+
+    .TeamSpotlight_background__wwEq_:after {
+        display: none
+    }
+}
+
+.TeamSpotlight_text-wrapper__tZ_sH {
+    z-index: 0
+}
+
+.TeamSpotlight_text-container__OEexS {
+    display: grid;
+    grid-template-columns: 2fr 8fr 2fr;
+    grid-template-areas: ". content ."
+}
+
+@media(max-width: 80em) {
+    .TeamSpotlight_text-container__OEexS {
+        grid-template-columns:1fr 10fr 1fr
+    }
+}
+
+@media(max-width: 48em) {
+    .TeamSpotlight_text-container__OEexS {
+        grid-template-columns:1fr;
+        grid-template-areas: "content"
+    }
+}
+
+.TeamSpotlight_text__MmRgI {
+    grid-area: content;
+    background: var(--navy);
+    padding: var(--gutter)
+}
+
+@media(max-width: 48em) {
+    .TeamSpotlight_text__MmRgI {
+        padding:var(--section-padding) 0
+    }
+}
+
+.TeamSpotlight_text__MmRgI *+* {
+    margin-top: var(--sp6)
+}
+
+.TeamSpotlight_text__MmRgI a {
+    justify-self: start
+}
+
+.TeamSpotlight_description__zEKGe {
+    grid-column: 1/-1;
+    color: var(--navy20)
+}
+
+.wrapper:not(.full-width)>*,footer:not(.full-width)>*,main>section:not(.full-width)>* {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: min(var(--wrapper-width),85.7142857143vw)
+}
+
+.wrapper.narrow>*,footer.narrow>*,main>section.narrow>* {
+    max-width: calc(min(var(--wrapper-width),85.7142857143vw)*8/12)
+}
+
+/*.wrapper:not(.full-width)>*,footer:not(.full-width)>*,main>section:not(.full-width)>* {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: min(var(--wrapper-width),85.7142857143vw)
+}*/
