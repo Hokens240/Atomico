@@ -11,8 +11,8 @@
 }
 
 .first-section {
- background-color: #002B38;
- padding: 40px;   
+    background-color: #002B38;
+    padding: 30px;
 }
 
 .ceo-image {
@@ -21,7 +21,507 @@
     height: 90px;
 }
 
-.readmore, a:link, a:hover, a:visited {
+.fade-out {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    /* Default transition speed */
+}
+
+.readmore,
+a:link,
+a:hover,
+a:visited {
     color: white;
     text-decoration: underline;
+}
+
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #f1f1f1;
+    align-items: center;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+    background-color: #002B38;
+    color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+    background-color: #002B38;
+    color: white;
+    transform: rotateY(180deg);
+    text-align: center;
+}
+
+:root {
+    --navy: #002b38;
+    --navy80: #335560;
+    --navy60: #668088;
+    --navy40: #99aaaf;
+    --navy20: #ccd5d7;
+    --navy5: #f2f4f5;
+    --darkgrey: #80969b;
+    --lightgrey: #ccd5d7;
+    --white: #fff;
+    --black: #000;
+    --mint: #99dbcf;
+    --red: #f9aa9e;
+    --orange: #f2c07a;
+    --yellow: #f3d675;
+    --green: #aeeaa4;
+    --blue: #a1beec;
+    --purple: #c5bef1;
+    --pink: #f1c1ec;
+    --grey: #ccd5d7;
+    --cream: #fdf8f3;
+    --darkcream: #f4ebe2;
+    --bg-color: var(--white);
+    --text-color: var(--navy);
+    --sp1: 0.25rem;
+    --sp2: 0.5rem;
+    --sp3: 1rem;
+    --sp4: 1.5rem;
+    --sp5: 2rem;
+    --sp6: 2.5rem;
+    --sp7: 3rem;
+    --rad1: 4px;
+    --wrapper-width: 1280px;
+    --gutter: min(calc(var(--wrapper-width) / 12),100vw/14);
+    --section-padding-sm: clamp(1rem,1vmin,1rem);
+    --section-padding: clamp(3rem,10vmin,6rem);
+    --navbar-height: calc(var(--sp5) * 3);
+    --transition-timing: cubic-bezier(0.76,0,0.24,1);
+    --page-hero-spacing: calc(var(--section-padding) * 2.5);
+    --page-hero-spacing-lg: calc(var(--section-padding) * 1.75)
+}
+
+.Footer_footer__OYoYH {
+    background-color: var(--black);
+    color: var(--white);
+    padding: var(--section-padding) 0;
+    margin-top: auto;
+    overflow: hidden;
+    position: relative
+}
+
+.Footer_footer__OYoYH>div {
+    display: flex;
+    justify-content: space-around
+}
+
+@media(max-width: 48em) {
+    .Footer_footer__OYoYH>div {
+        flex-direction:column
+    }
+}
+
+.Footer_footer__OYoYH address a {
+    text-decoration: inherit;
+    color: inherit;
+    font-size: inherit
+}
+
+.Footer_footer__OYoYH>div {
+    position: relative;
+    z-index: 1
+}
+
+.Footer_links__M2Ji2 {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(3,1fr)
+}
+
+.Footer_links__M2Ji2 li+li {
+    margin-top: 1rem
+}
+
+.Footer_links__M2Ji2 a {
+    font: inherit
+}
+
+@media(max-width: 48em) {
+    .Footer_links__M2Ji2 {
+        grid-template-columns:1fr 1fr;
+        order: 1
+    }
+
+    .Footer_links__M2Ji2 ul {
+        margin-top: 2rem
+    }
+}
+
+.Footer_logo__oqoeK {
+    flex: 0 0 50%
+}
+
+.Footer_logo__oqoeK svg {
+    width: 120px
+}
+
+@media(max-width: 48em) {
+    .Footer_logo__oqoeK {
+        order:2;
+        margin-top: 5rem
+    }
+}
+
+.Footer_footer__OYoYH:before {
+    content: "";
+    position: absolute;
+    border-radius: 100%;
+    border: 1px solid var(--navy);
+    height: 40vw;
+    width: 40vw;
+    top: 40%;
+    left: -15%;
+    animation: Footer_leftCircle__uAXDe 5s infinite alternate
+}
+
+@media(max-width: 48em) {
+    .Footer_footer__OYoYH:before {
+        display:none
+    }
+}
+
+.Footer_footer__OYoYH:after {
+    content: "";
+    position: absolute;
+    border-radius: 100%;
+    border: 1px solid var(--navy);
+    height: 60vw;
+    width: 60vw;
+    top: -140%;
+    animation: Footer_rightCircle___0bb6 5s infinite alternate;
+    right: -10%
+}
+
+@media(max-width: 80em) {
+    .Footer_footer__OYoYH:after {
+        height:70vw;
+        width: 70vw;
+        right: -10%
+    }
+}
+
+@media(max-width: 48em) {
+    .Footer_footer__OYoYH:after {
+        top:70%
+    }
+}
+
+.Footer_contact__W4Ld2 {
+    margin-top: var(--sp4)
+}
+
+.Footer_contact__W4Ld2 p {
+    margin-bottom: var(--sp1)
+}
+
+.HeroHome_hero__4OgVT {
+    height: 100vh;
+    position: relative;
+    overflow: hidden
+}
+
+section.dark {
+    --bg-color: var(--navy);
+    --text-color: var(--white);
+    --team-card-role-color: var(--navy40);
+    --team-card-desc-color: var(--navy20);
+    --decorative-circles-color: var(--navy80)
+}
+
+.Video_wrapper__sk8Di {
+    text-align: center
+}
+
+.HeroHome_video__iAHqQ {
+    transform: scale(1);
+    transform-origin: top center;
+    transition: transform .6s var(--transition-timing)
+}
+
+.HeroHome_video__iAHqQ:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,.5)
+}
+
+.HeroHome_out__DmI46 .HeroHome_video__iAHqQ {
+    transform: scale(.85)
+}
+
+.HeroHome_video__iAHqQ video {
+    height: 100vh;
+    object-fit: cover
+}
+
+.Video_container__wrWQb {
+    position: relative
+}
+
+.Video_video__Co_G0 {
+    width: 100%
+}
+
+.HeroHome_content__1N1En {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column
+}
+
+.HeroHome_content__1N1En>div {
+    text-align: center;
+    margin: auto calc(var(--gutter)*2.5)
+}
+
+.HeroHome_content__1N1En>div h1 {
+    max-width: 800px;
+    margin: 0 auto
+}
+
+.heading-xl {
+    letter-spacing: -.02em;
+    font-size: 2.625rem;
+    font-size: clamp(2.625rem,8.75vw,7rem);
+    line-height: .9em
+}
+
+.heading-l,.heading-xl {
+    font-family: Barlow,Helvetica,Arial,sans-serif;
+    font-weight: 600
+}
+
+.HeroHome_announcement__5yYC9 {
+    display: grid;
+    grid-template-columns: 2fr 8fr 2fr;
+    margin-top: 4rem;
+    grid-auto-rows: min-content
+}
+
+@media(max-width: 48em) {
+    .HeroHome_announcement__5yYC9 {
+        grid-template-columns:repeat(12,1fr);
+        margin-top: 2rem;
+        grid-auto-rows: min-content
+    }
+}
+
+.HeroHome_link__iiDNg {
+    grid-column: 2;
+    border: 5px solid transparent;
+    background-color: var(--mint);
+    padding: 12px 20px;
+    margin: auto
+}
+
+@media(max-width: 48em) {
+    .HeroHome_link__iiDNg {
+        grid-column:1/-1;
+        margin: auto
+    }
+}
+
+.Link_wrapper__lo7PN {
+    color: inherit;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none
+}
+
+.Link_wrapper__lo7PN .Link_arrow__h4_4o {
+    margin-left: var(--sp2);
+    width: 24px;
+    stroke: currentColor;
+    transition: transform .3s ease-in-out;
+    transform: translateX(0)
+}
+
+.Link_wrapper__lo7PN.Link_underline__Ixex1 {
+    position: relative
+}
+
+.Link_wrapper__lo7PN.Link_underline__Ixex1:after,.Link_wrapper__lo7PN.Link_underline__Ixex1:before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: currentColor;
+    position: absolute;
+    left: 0;
+    top: calc(100% + var(--sp1));
+    pointer-events: none;
+    transition: transform .3s ease-in-out
+}
+
+.Link_wrapper__lo7PN.Link_underline__Ixex1:before {
+    transform-origin: center right;
+    transform: scaleX(1)
+}
+
+.Link_wrapper__lo7PN.Link_underline__Ixex1:after {
+    transform-origin: center left;
+    transform: scaleX(0);
+    transition-delay: .2s
+}
+
+.Link_wrapper__lo7PN.Link_underline__Ixex1:hover:before {
+    transform: scaleX(0)
+}
+
+.Link_wrapper__lo7PN.Link_underline__Ixex1:hover:after {
+    transform: scaleX(1)
+}
+
+.Link_wrapper__lo7PN:hover .Link_arrow__h4_4o {
+    transform: translateX(50%)
+}
+
+.HeroHome_label__nm1f3 {
+    color: var(--navy)
+}
+
+.body-l,.body-m,a {
+    font-family: Barlow,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    line-height: 1.4em
+}
+
+.body-m {
+    font-size: 1rem;
+    font-size: clamp(1rem,.925rem + .25vw,1.125rem)
+}
+
+.body-m.bold {
+    font-weight: 500
+}
+
+.body-l,a {
+    font-size: 1.1875rem;
+    font-size: clamp(1.1875rem,1.1125rem + .25vw,1.3125rem)
+}
+
+.body-l,.body-m,a {
+    font-family: Barlow,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    line-height: 1.4em
+}
+
+.heading-m,.heading-s,.large-text {
+    font-family: Barlow,Helvetica,Arial,sans-serif;
+    letter-spacing: -.01em
+}
+
+.heading-s,.large-text {
+    font-weight: 400;
+    font-size: 1.375rem;
+    font-size: clamp(1.375rem,1.075rem + 1vw,1.875rem);
+    line-height: 1.3em
+}
+
+.heading-s.bold,.large-text.bold {
+    font-weight: 600
+}
+
+.heading-s {
+    font-weight: 600;
+    font-size: 1.375rem;
+    font-size: clamp(1.375rem,1.1233rem + 1.0738vw,1.875rem)
+}
+
+.heading-s,.heading-xs {
+    font-family: Barlow,Helvetica,Arial,sans-serif;
+    line-height: 1.3em
+}
+
+.HeroHome_tagline__knYdL {
+    grid-column: 2
+}
+
+@media(max-width: 48em) {
+    .HeroHome_tagline__knYdL {
+        grid-column:1/-1
+    }
+}
+
+.HeroHome_message__1VRR0 {
+    grid-column: 2;
+    margin-top: .5rem;
+    margin-bottom: 1.5rem
+}
+
+@media(max-width: 48em) {
+    .HeroHome_message__1VRR0 {
+        grid-column:1/-1;
+        margin-bottom: .5rem
+    }
+}
+
+.HeroHome_logos__rtyf8 {
+    display: flex;
+    margin: 0 auto 2rem;
+    gap: 3rem;
+    align-items: center;
+    opacity: 1;
+    transition: opacity .6s ease
+}
+
+@media(max-width: 48em) {
+    .HeroHome_logos__rtyf8 {
+        display:none
+    }
+}
+
+.HeroHome_out__DmI46 .HeroHome_logos__rtyf8 {
+    opacity: 0
+}
+
+@media(max-width: 48em) {
+    .HeroHome_logos__rtyf8 {
+        gap:2rem;
+        flex-direction: column
+    }
+}
+
+.HeroHome_logos__rtyf8 li {
+    width: 8rem
 }
