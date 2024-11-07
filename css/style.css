@@ -21,15 +21,6 @@
     /* Default transition speed */
 }
 
-.readmore,
-a:link,
-a:hover,
-a:visited {
-    color: white;
-    text-decoration: underline;
-}
-
-
 .card-container {
     perspective: 700px;
 }
