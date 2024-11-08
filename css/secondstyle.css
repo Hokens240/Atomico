@@ -306,6 +306,13 @@
     border-radius: 0
 }
 
+.Newsletter_container__27hc_ .newsletterinput textarea,.Newsletter_container__27hc_ .newslettersubmit {
+    padding: 1rem 0;
+    border: none;
+    border-bottom: 1px solid var(--navy);
+    border-radius: 0
+}
+
 .Newsletter_container__27hc_ .newsletterinput {
     display: flex;
     flex-grow: 1
@@ -317,10 +324,22 @@
     padding-left: var(--sp2)
 }
 
+.Newsletter_container__27hc_ .newsletterinput textarea {
+    flex-grow: 1;
+    background-color: inherit;
+    padding-left: var(--sp2)
+}
+
 .Newsletter_container__27hc_ .newsletterinput input::placeholder {
     color: var(--navy60);
     opacity: 1
 }
+
+.Newsletter_container__27hc_ .newsletterinput textarea::placeholder {
+    color: var(--navy60);
+    opacity: 1
+}
+
 
 .Newsletter_container__27hc_ .newslettersubmit {
     padding: 1rem;
