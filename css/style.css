@@ -808,6 +808,15 @@ main>section.light-cream {
     max-width: calc(min(var(--wrapper-width),85.7142857143vw)*8/12)
 }
 
+.Logo_logo__zOGd_ svg {
+    fill: var(--logo-color,var(--navy));
+    stroke: none
+}
+
+.mint .Logo_logo__zOGd_ :is(.logo_svg__dot,.logo-sm_svg__dot) {
+    fill: black;
+}
+
 /*.wrapper:not(.full-width)>*,footer:not(.full-width)>*,main>section:not(.full-width)>* {
     margin-left: auto;
     margin-right: auto;
